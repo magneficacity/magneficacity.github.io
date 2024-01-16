@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perusahaan Swasta</title>
+  <!-- Tambahkan Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Tambahkan CSS kustom Anda -->
+  <style>
+    /* CSS kustom Anda */
+    body {
+      background: url('path-to-your-white-hat-logo.png') center/cover no-repeat, #0f0f0f;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+    }
+
+    nav {
+      background-color: #000;
+    }
+
+    nav a {
+      color: #00ff00 !important;
+    }
+
+    .container {
+      background-color: #111;
+      border: 1px solid #00ff00;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+
+    input.form-control {
+      background-color: #222;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+    }
+
+    table {
+      background-color: #111;
+      color: #00ff00;
+    }
+
+    table th {
+      background-color: #000;
+    }
+
+    table td, table th {
+      border: 1px solid #00ff00;
+    }
+
+    #calendarClockContainer {
+      border-top: 1px solid #00ff00;
+    }
+
+    #calendarDisplay, #clockDisplay {
+      color: #00ff00;
+    }
+
+    header {
+      background-color: #000;
+      box-shadow: 0 5px 10px rgba(0, 255, 0, 0.5);
+    }
+
+    header a {
+      color: #00ff00 !important;
+    }
+
+    /* Efek teks untuk tampilan hacker */
+    h1::after, h1::before,
+    #calendarDisplay::after, #clockDisplay::before {
+      content: '|';
+      animation: blink 1s infinite;
+      display: inline-block;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* Animasi ke atas untuk konten utama */
+    .container {
+      animation: slide-up 0.5s ease-in-out;
+    }
+
+    @keyframes slide-up {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer img {
+      max-width: 30px;
+      height: auto;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <header>
+    <a href="index.html">Kembali ke Beranda</a>
+  </header>
+
+  <div class="container mt-5">
+    <h1 class="mb-4">Perusahaan Swasta Resmi Magnefica</h1>
+
+    <!-- Form Pencarian -->
+    <div class="mb-3">
+      <input type="text" id="searchInput" class="form-control" placeholder="Cari nama perusahaan...">
+      <progress id="searchProgress" style="display: none;"></progress>
+    </div>
+
+    <!-- Kalender dan Hari Jawa, Jam dinding -->
+    <div id="calendarClockContainer">
+      <div id="calendarDisplay" class="form-control"></div>
+
+      <!-- Jam yang aktif -->
+      <div id="clockDisplay"></div>
+    </div>
+
+    <!-- Tabel Anggota Komunitas -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nomor Registrasi</th>
+          <th scope="col">Nama Perusahaan</th>
+          <th scope="col">Nama Atasan</th>
+          <th scope="col">Alamat</th>
+          <th scope="col">Kontak</th>
+        </tr>
+      </thead>
+      <tbody id="memberTableBody">
+        <tr>
+          <td>170124</td>
+          <td>NW-Company</td>
+          <td>Nicholas Scout</td>
+          <td>Indramayu</td>
+          <td>+62 831-0121-4581</td>
+        </tr>
+        <tr>
+          <td>180124</td>
+          <td>G-Company</td>
+          <td>Derren Austin</td>
+          <td>Bandung</td>
+          <td>+62 838-7271-8865</td>
+        </tr>
+        <!-- Tambahkan lebih banyak baris sesuai kebutuhan -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Tambahkan Bootstrap JS dan Popper.js (diperlukan oleh Bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Tambahkan JavaScript kustom Anda -->
+  <script>
+    // JavaScript untuk fitur pencarian
+    document.getElementById('searchInput').addEventListener('input', function () {
+      let searchValue = this.value.toLowerCase();
+      let memberTableBody = document.getElementById('memberTableBody');
+      let rows = memberTableBody.getElementsByTagName('tr');
+
+      // Tampilkan animasi progres
+      document.getElementById('searchProgress').style.display = 'block';
+
+      setTimeout(function () {
+        for (let i = 0; i < rows.length; i++) {
+          let rowData = rows[i].textContent.toLowerCase();
+          if (rowData.includes(searchValue)) {
+            rows[i].style.display = 'table-row';
+          } else {
+            rows[i].style.display = 'none';
+          }
+        }
+        // Sembunyikan animasi progres setelah pencarian selesai
+        document.getElementById('searchProgress').style.display = 'none';
+      }, 500); // Waktu simulasi pencarian (dalam milidetik), dapat disesuaikan
+    });
+
+    // JavaScript untuk menampilkan kalender dan hari Jawa
+    function displayCalendarAndJavaneseDay() {
+      let currentDate = new Date();
+      let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      let calendarDisplay = document.getElementById('calendarDisplay');
+
+      // Menampilkan tanggal dalam format yang sesuai
+      calendarDisplay.innerHTML = currentDate.toLocaleDateString('id-ID', options);
+
+      // Menampilkan hari Jawa
+      let javaneseDay = getJavaneseDay(currentDate);
+      calendarDisplay.innerHTML += `<br>Hari Jawa: ${javaneseDay}`;
+    }
+
+    // Fungsi untuk mendapatkan hari Jawa
+    function getJavaneseDay(date) {
+      // Implementasikan logika untuk mendapatkan hari Jawa sesuai tanggal
+      // Untuk sementara, kita menggunakan placeholder 'Pahing' untuk setiap hari
+      return 'Pahing';
+    }
+
+    // Fungsi untuk menampilkan jam yang aktif
+    function displayClock() {
+      let currentDateTime = new Date();
+      let options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      let clockDisplay = document.getElementById('clockDisplay');
+      clockDisplay.textContent = currentDateTime.toLocaleTimeString('id-ID', options);
+    }
+
+    // Panggil fungsi untuk menampilkan kalender dan hari Jawa saat halaman dimuat
+    displayCalendarAndJavaneseDay();
+
+    // Set interval untuk memperbarui kalender setiap 24 jam
+    setInterval(displayCalendarAndJavaneseDay, 24 * 60 * 60 * 1000);
+
+    // Set interval untuk memperbarui jam setiap detik
+    setInterval(displayClock, 1000);
+  </script>
+
+  <!-- Footer -->
+  <footer class="mt-5" style="text-align: center; padding: 20px; background-color: #000;">
+    <!-- Tambahkan logo ikon Anonymous -->
+    <p style="color: #00ff00; margin-top: 10px;">&copy; 2024 <b>Magnefica</b>. All rights reserved.</p>
+  </footer>
+</body>
+</html>
