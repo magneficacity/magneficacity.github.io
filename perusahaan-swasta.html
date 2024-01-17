@@ -27,6 +27,7 @@
       background-color: #111;
       border: 1px solid #00ff00;
       box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+      margin-top: 20px; /* margin atas pada desktop */
     }
 
     input.form-control {
@@ -50,6 +51,7 @@
 
     #calendarClockContainer {
       border-top: 1px solid #00ff00;
+      margin-bottom: 20px; /* margin bawah pada desktop */
     }
 
     #calendarDisplay, #clockDisplay {
@@ -110,6 +112,17 @@
       height: auto;
       margin: 0 10px;
     }
+
+    /* Gaya Responsif */
+    @media (max-width: 767px) {
+      .container {
+        margin-top: 60px; /* margin atas pada handphone */
+      }
+
+      #calendarClockContainer {
+        margin-bottom: 60px; /* margin bawah pada handphone */
+      }
+    }
   </style>
 </head>
 <body>
@@ -140,10 +153,9 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">Nomor Registrasi</th>
+          <th scope="col">No Reg.</th>
           <th scope="col">Nama Perusahaan</th>
           <th scope="col">Nama Atasan</th>
-          <th scope="col">Alamat</th>
           <th scope="col">Kontak</th>
         </tr>
       </thead>
@@ -152,15 +164,13 @@
           <td>170124</td>
           <td>NW-Company</td>
           <td>Nicholas Scout</td>
-          <td>Indramayu</td>
-          <td>+62 831-0121-4581</td>
+          <td> - </td>
         </tr>
         <tr>
-          <td>180124</td>
-          <td>G-Company</td>
-          <td>Derren Austin</td>
-          <td>Bandung</td>
-          <td>+62 838-7271-8865</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
         </tr>
         <!-- Tambahkan lebih banyak baris sesuai kebutuhan -->
       </tbody>
