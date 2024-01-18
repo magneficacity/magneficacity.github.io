@@ -112,6 +112,95 @@
       height: auto;
       margin: 0 10px;
     }
+            body {
+            background-color: #000;
+            color: lime;
+            font-family: 'Courier New', monospace;
+        }
+
+        nav.navbar {
+            background-color: #000 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: lime !important;
+        }
+
+        .navbar-toggler {
+            background-color: #008000; /* Warna hijau untuk tema hacker */
+            border: 1px solid #008000;
+        }
+
+        .navbar-toggler-icon {
+            background-color: lime; /* Warna lime untuk ikon hamburger */
+        }
+
+        .card {
+            background-color: #222;
+            color: lime;
+        }
+
+        .card-header {
+            background-color: #111;
+            border-bottom: 1px solid lime;
+        }
+
+        .card-body {
+            background-color: #333;
+        }
+
+        .accordion-item {
+            background-color: #111;
+            color: lime;
+            border: 1px solid lime;
+        }
+
+        .accordion-button {
+            color: lime !important;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: lime;
+        }
+
+        #clock {
+            color: lime;
+        }
+
+        #calendar {
+            color: lime;
+        }
+
+        #copyright {
+            background: #111;
+            color: lime;
+        }
+
+        /* Theme hacker specific styles */
+        code {
+            color: yellow;
+        }
+
+        .btn-outline-success {
+            border-color: lime;
+            color: lime;
+        }
+
+        .btn-outline-success:hover {
+            background-color: lime;
+            color: #000;
+        }
+
+        .form-control {
+            background-color: #111;
+            border-color: lime;
+            color: lime;
+        }
+
+        .form-control:focus {
+            background-color: #222;
+            color: lime;
+        }
 
     /* Gaya Responsif */
     @media (max-width: 767px) {
@@ -133,9 +222,64 @@
   </script>
 
   <!-- Navigasi -->
-  <header>
-    <a href="index.html">Kembali ke Beranda</a>
-  </header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"> <img src="img/icon.png" width="50px">Magnefica </a>
+        <div id="clock" class="me-3"></div>
+        <div id="calendar"></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ann.html">Announcement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="update.html">Updates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Fraction
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="goodside/gov.html">Magnefica Government</a></li>
+                        <li><a class="dropdown-item" href="goodside/fbi.html">Magnefica FBI</a></li>
+                        <li><a class="dropdown-item" href="goodside/police.html">Magnefica Police</a></li>
+                        <li><a class="dropdown-item" href="goodside/medic.html">Magnefica Medic</a></li>
+                        <li><a class="dropdown-item" href="goodside/foodtrader.html">Magnefica Food trader</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Family
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">- No Family yet -</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        More information
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="moreinformation/admininformation.html">Admin information</a></li>
+                        <li><a class="dropdown-item" href="moreinformation/event.html">Event</a></li>
+                        <li><a class="dropdown-item" href="moreinformation/donationinformation.html">Donation information</a></li>
+                        <li><a class="dropdown-item" href="perusahaan-swasta.html">Perusahaan Swasta</a></li>
+                        <li><a class="dropdown-item" href="moreinformation/rules.html">Rules</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
   <div class="container mt-5">
     <h1 class="mb-4">Perusahaan Swasta Resmi Magnefica</h1>
@@ -146,13 +290,6 @@
       <progress id="searchProgress" style="display: none;"></progress>
     </div>
 
-    <!-- Kalender dan Hari Jawa, Jam dinding -->
-    <div id="calendarClockContainer">
-      <div id="calendarDisplay" class="form-control"></div>
-
-      <!-- Jam yang aktif -->
-      <div id="clockDisplay"></div>
-    </div>
 
     <!-- Tabel Anggota Komunitas -->
     <table class="table">
@@ -176,71 +313,33 @@
     </table>
   </div>
 
-  <!-- Tambahkan Bootstrap JS dan Popper.js (diperlukan oleh Bootstrap) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Tambahkan JavaScript kustom Anda -->
-  <script>
-    // JavaScript untuk fitur pencarian
-    document.getElementById('searchInput').addEventListener('input', function () {
-      let searchValue = this.value.toLowerCase();
-      let memberTableBody = document.getElementById('memberTableBody');
-      let rows = memberTableBody.getElementsByTagName('tr');
+<!--copyright-->
 
-      // Tampilkan animasi progres
-      document.getElementById('searchProgress').style.display = 'block';
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-      setTimeout(function () {
-        for (let i = 0; i < rows.length; i++) {
-          let rowData = rows[i].textContent.toLowerCase();
-          if (rowData.includes(searchValue)) {
-            rows[i].style.display = 'table-row';
-          } else {
-            rows[i].style.display = 'none';
-          }
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Clock and calendar update function
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var formattedTime = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+            document.getElementById('clock').innerText = formattedTime;
+
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+            var formattedDate = days[now.getDay()] + ', ' + now.getDate() + ' ' + months[now.getMonth()] + ' ' + now.getFullYear();
+            document.getElementById('calendar').innerText = formattedDate;
         }
-        // Sembunyikan animasi progres setelah pencarian selesai
-        document.getElementById('searchProgress').style.display = 'none';
-      }, 500); // Waktu simulasi pencarian (dalam milidetik), dapat disesuaikan
+
+        setInterval(updateTime, 1000);
+        updateTime(); // Call the function immediately to set initial values
     });
+</script>
 
-    // JavaScript untuk menampilkan kalender dan hari Jawa
-    function displayCalendarAndJavaneseDay() {
-      let currentDate = new Date();
-      let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-      let calendarDisplay = document.getElementById('calendarDisplay');
-
-      // Menampilkan tanggal dalam format yang sesuai
-      calendarDisplay.innerHTML = currentDate.toLocaleDateString('id-ID', options);
-
-      // Menampilkan hari Jawa
-      let javaneseDay = getJavaneseDay(currentDate);
-      calendarDisplay.innerHTML += `<br>Hari Jawa: ${javaneseDay}`;
-    }
-
-    // Fungsi untuk mendapatkan hari Jawa
-    function getJavaneseDay(date) {
-      // Implementasikan logika untuk mendapatkan hari Jawa sesuai tanggal
-      // Untuk sementara, kita menggunakan placeholder 'Pahing' untuk setiap hari
-      return 'Pahing';
-    }
-
-    // Fungsi untuk menampilkan jam yang aktif
-    function displayClock() {
-      let currentDateTime = new Date();
-      let options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-      let clockDisplay = document.getElementById('clockDisplay');
-      clockDisplay.textContent = currentDateTime.toLocaleTimeString('id-ID', options);
-    }
-
-    // Panggil fungsi untuk menampilkan kalender dan hari Jawa saat halaman dimuat
-    displayCalendarAndJavaneseDay();
-
-    // Set interval untuk memperbarui kalender setiap 24 jam
-    setInterval(displayCalendarAndJavaneseDay, 24 * 60 * 60 * 1000);
-
-    // Set interval untuk memperbarui jam setiap detik
-    setInterval(displayClock, 1000);
-  </script>
 
   <!-- Footer -->
   <footer class="mt-5" style="text-align: center; padding: 20px; background-color: #000;">
