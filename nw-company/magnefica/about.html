@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="img/icon.png" color="black">
+    <title>Magnefica | About</title>
+    <!-- My CSS -->
+    <style>
+        body {
+            background-color: #000;
+            color: lime;
+            font-family: 'Courier New', monospace;
+        }
+
+        nav.navbar {
+            background-color: #000 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: lime !important;
+        }
+
+        .card {
+            background-color: #222;
+            color: lime;
+            margin-top: 20px;
+        }
+
+        .card-header {
+            background-color: #111;
+            border-bottom: 1px solid lime;
+        }
+
+        .card-body {
+            background-color: #333;
+        }
+
+        .btn-success {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .accordion-item {
+            background-color: #111;
+            color: lime;
+            border: 1px solid lime;
+        }
+
+        .navbar-toggler {
+            background-color: #008000; /* Warna hijau untuk tema hacker */
+            border: 1px solid #008000;
+        }
+
+
+        .navbar-toggler-icon {
+            background-color: lime; /* Warna lime untuk ikon hamburger */
+        }
+
+        .accordion-button {
+            color: lime !important;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: lime;
+        }
+
+        #contact-form {
+        background-color: #111;
+        color: lime;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 1px solid lime;
+        border-radius: 5px;
+        width: 70%; /* Menambahkan properti lebar */
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+        #contact-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #contact-form input,
+        #contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            color: green;
+        }
+
+        #contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        #copyright {
+            background: #111;
+            color: lime;
+        }
+    </style>
+</head>
+<body>
+    <!--header-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"> <img src="img/icon.png" width="50px">Magnefica </a>
+        <div id="clock" class="me-3"></div>
+        <div id="calendar"></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ann.html">Announcement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="update.html">Updates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Fraction
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="goodside/gov.html">Magnefica Government</a></li>
+                        <li><a class="dropdown-item" href="goodside/fbi.html">Magnefica FBI</a></li>
+                        <li><a class="dropdown-item" href="goodside/police.html">Magnefica Police</a></li>
+                        <li><a class="dropdown-item" href="goodside/medic.html">Magnefica Medic</a></li>
+                        <li><a class="dropdown-item" href="goodside/foodtrader.html">Magnefica Food trader</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Family
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">- No Family yet -</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        More information
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="moreinformation/admininformation.html">Admin information</a></li>
+                        <li><a class="dropdown-item" href="moreinformation/event.html">Event</a></li>
+                        <li><a class="dropdown-item" href="moreinformation/donationinformation.html">Donation information</a></li>
+                        <li><a class="dropdown-item" href="perusahaan-swasta.html">Perusahaan Swasta</a></li>
+                        <li><a class="dropdown-item" href="moreinformation/rules.html">Rules</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!--body-->
+    <div class="card">
+        <div class="card-header">
+            About
+        </div>
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Sejarah dibentuknya server</h5>
+                <div class="container">
+                    <p class="card-text">Server ini direncanakan oleh 3 orang pendiri utama yang sekarang menjadi Founder di server ini, dari rencana mereka membuat server hanya satu orang yang memiliki dana untuk menyewa jasa Developer, dan akhirnya kami menemukan Developer yang cocok dengan kami dan membantu memperbaiki kekurangan di server. Ingin melihat lebih banyak tentang staff?</p>
+                    <a href="moreinformation/admininformation.html" class="btn btn-primary">Staff List!</a>
+                </div>
+                <hr>
+                <h5 class="card-title">Sistem server</h5>
+                <div class="container">
+                    <p class="card-text">Server Magnefica Roleplay dibuat untuk client PC dan juga Android. Kami menyediakan fitur Voice and Chat untuk berkomunikasi di dalam Roleplay, dan Server kami menggunakan sistem keuangan dolar.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Contact via WhatsApp
+            </div>
+            <div class="container">
+                <div class="row">
+                    <!-- Kontak Owner Server -->
+                    <div class="col-sm-6">
+                        <div class="card m-2 p-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Owner Server</h5>
+                                <p class="card-text">Hello, my nickname is Hengky. I'm a Owner Server.</p>
+                                <a href="https://wa.me/6282373100219?text=Owner%20Server%20Magnefica%20ya?" class="btn btn-success"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Kontak Founder Server -->
+                    <div class="col-sm-6">
+                        <div class="card m-2 p-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Founder Server</h5>
+                                <p class="card-text">Hello, my nickname is Kenjo. I'm a Founder Server.</p>
+                                <a href="https://wa.me/628975558865?text=Founder%20Server%20Magnefica%20ya?" class="btn btn-success"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Kontak Developer Web -->
+                    <div class="col-sm-6">
+                        <div class="card m-2 p-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Developer Web</h5>
+                                <p class="card-text">Hello, my nickname is Nicholas. I'm a Developer Web.</p>
+                                <a href="https://wa.me/6283101214581?text=Developer%20Web%20Magnefica%20ya?" class="btn btn-success"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Kontak Developer SAMP -->
+                    <div class="col-sm-6">
+                        <div class="card m-2 p-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Developer SAMP</h5>
+                                <p class="card-text">Hello, my nickname is Riel. I'm a Developer SAMP.</p>
+                                <a href="https://wa.me/6285768221500?text=Developer%20SAMP%20Magnefica%20ya?" class="btn btn-success"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulir Kontak -->
+        <div id="contact-form" class="card">
+            <div class="card-header">
+                Contact Form
+            </div>
+            <form action="https://formspree.io/f/myyrzvwg" method="POST">
+                <label for="name">UCP Name:</label>
+                <input type="text" id="name" name="name-MF" placeholder="Masukan nama UCP anda..." required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email-MF" placeholder="Masukan email anda..." required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message-MF" rows="4" placeholder="Tuliskan sesuatu disini..." required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!--copyright-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Clock and calendar update function
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var formattedTime = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+            document.getElementById('clock').innerText = formattedTime;
+
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+            var formattedDate = days[now.getDay()] + ', ' + now.getDate() + ' ' + months[now.getMonth()] + ' ' + now.getFullYear();
+            document.getElementById('calendar').innerText = formattedDate;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime(); // Call the function immediately to set initial values
+    });
+</script>
+
+    <center>
+        <div id="copyright">
+            <div class="wrapper">
+                &copy;2024 <b>Magnefica</b> All Rights Reserved.
+            </div>
+        </div>
+    </center>
+</body>
+</html>

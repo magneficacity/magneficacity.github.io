@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="img/icon.png" color="black">
+    <title>Magnefica</title>
+    <!-- My CSS -->
+    <style>
+        body {
+            background-color: #000;
+            color: lime;
+            font-family: 'Courier New', monospace;
+        }
+
+        nav.navbar {
+            background-color: #000 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: lime !important;
+        }
+
+        .navbar-toggler {
+            background-color: #008000; /* Warna hijau untuk tema hacker */
+            border: 1px solid #008000;
+        }
+
+        .navbar-toggler-icon {
+            background-color: lime; /* Warna lime untuk ikon hamburger */
+        }
+
+        .card {
+            background-color: #222;
+            color: lime;
+        }
+
+        .card-header {
+            background-color: #111;
+            border-bottom: 1px solid lime;
+        }
+
+        .card-body {
+            background-color: #333;
+        }
+
+        .accordion-item {
+            background-color: #111;
+            color: lime;
+            border: 1px solid lime;
+        }
+
+        .accordion-button {
+            color: lime !important;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: lime;
+        }
+
+        #clock {
+            color: lime;
+        }
+
+        #calendar {
+            color: lime;
+        }
+
+        #copyright {
+            background: #111;
+            color: lime;
+        }
+
+        /* Theme hacker specific styles */
+        code {
+            color: yellow;
+        }
+
+        .btn-outline-success {
+            border-color: lime;
+            color: lime;
+        }
+
+        .btn-outline-success:hover {
+            background-color: lime;
+            color: #000;
+        }
+
+        .form-control {
+            background-color: #111;
+            border-color: lime;
+            color: lime;
+        }
+
+        .form-control:focus {
+            background-color: #222;
+            color: lime;
+        }
+    </style>
+
+</head>
+<body>
+<!--header-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"> <img src="img/icon.png" width="50px">Magnefica </a>
+        <div id="clock" class="me-3"></div>
+        <div id="calendar"></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ann.html">Announcement</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="update.html">Updates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Fraction
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="goodside/gov.html">Magnefica Government</a></li>
+                        <li><a class="dropdown-item" href="goodside/fbi.html">Magnefica FBI</a></li>
+                        <li><a class="dropdown-item" href="goodside/police.html">Magnefica Police</a></li>
+                        <li><a class="dropdown-item" href="goodside/medic.html">Magnefica Medic</a></li>
+                        <li><a class="dropdown-item" href="goodside/foodtrader.html">Magnefica Food trader</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Family
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">- No Family yet -</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        More information
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="moreinformation/admininformation.html">Admin information</a></li>
+                        <li><a class="dropdown-item" href="moreinformation/event.html">Event</a></li>
+                        <li><a class="dropdown-item" href="moreinformation/donationinformation.html">Donation information</a></li>
+                        <li><a class="dropdown-item" href="perusahaan-swasta.html">Perusahaan Swasta</a></li>
+                        <li><a class="dropdown-item" href="moreinformation/rules.html">Rules</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="card">
+    <div class="card-header">
+        Home
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Selamat Datang!</h5>
+        <p class="card-text">Halo para warga, selamat datang di web Magnefica! informasi seputar server kami bisa kalian baca di About atau dengan mengklik tombol yang ada dibawah ini.</p>
+        <a href="about.html" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+
+<hr>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <h5 class="card-title">Server</h5>
+            </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">IP : <code>- Server Maintence -</code></div>
+            <div class="accordion-body"><a href="https://discord.com/invite/9dFuFVbDh3" type="button" class="btn btn-primary"><i class='bx bxl-discord-alt'></i> Discord</a></div>
+        </div>
+    </div>
+</div>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/b1.png" class="d-block w-100" alt="banner logo">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Magnefica</h5>
+                <p>Kami membuat server kami dengan nama Magnefica itu diambil dari bahasa Latin yang aslinya Magnifica yang berarti Agung atau Mulia, kami sengaja mempelesetkan dari yang tadinya Magnifica menjadi Magnefica itu karena kami percaya bahwa hanya Tuhan lah yang maha Mulia.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="img/b2.png" class="d-block w-100" alt="banner 2">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="img/b3.png" class="d-block w-100" alt="banner 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<hr>
+
+<!--copyright-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Clock and calendar update function
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var formattedTime = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+            document.getElementById('clock').innerText = formattedTime;
+
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+            var formattedDate = days[now.getDay()] + ', ' + now.getDate() + ' ' + months[now.getMonth()] + ' ' + now.getFullYear();
+            document.getElementById('calendar').innerText = formattedDate;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime(); // Call the function immediately to set initial values
+    });
+</script>
+
+<center>
+    <div id="copyright">
+        <div class="wrapper">
+            &copy;2024 <b>Magnefica</b> All Rights Reserved.
+        </div>
+    </div>
+</center>
+</body>
+</html>
